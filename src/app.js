@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-//const config = require('./config');
+const config = require('./config');
 
 const app = express();
 const router = express.Router();
@@ -14,7 +14,7 @@ const importador = require('./models/importador');
 
 //Carrega rotas
 const index = require('./routes/index');
-const importador = require('./routes/importador-route');
+const importador_route = require('./routes/importador-route');
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -28,6 +28,6 @@ app.use(function (req, res, next) {
 });
 
 app.use('/', index);
-app.use('/importador', importador);
+app.use('/importador', importador_route);
 
 module.exports = app;
