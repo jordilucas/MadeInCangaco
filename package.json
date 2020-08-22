@@ -1,0 +1,22 @@
+{
+  "name": "madeincangaco",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jordilucas/MadeInCangaco.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jordilucas/MadeInCangaco/issues"
+  },
+  "homepage": "https://github.com/jordilucas/MadeInCangaco#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
