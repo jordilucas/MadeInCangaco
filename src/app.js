@@ -6,8 +6,15 @@ const mongoose = require('mongoose');
 const app = express();
 const router = express.Router();
 
+//conexao banco
+mongoose.connect(config.connectionString);
+
+// carrega models
+const importador = require('./models/importador');
+
 //Carrega rotas
 const index = require('./routes/index');
+const importador = require('./routes/importador-route');
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -21,5 +28,6 @@ app.use(function (req, res, next) {
 });
 
 app.use('/', index);
+app.use('/importador', importador);
 
 module.exports = app;
